@@ -6,7 +6,7 @@
   margin-top: 2rem;
 }
 .heading Button {
-  margin-top: 1rem;
+  margin-top: 0rem;
 }
 .form-comp {
   display: flex;
@@ -29,3 +29,11 @@
 .css-1t2gott {
   text-align: center;
 }
+.loadButton {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+

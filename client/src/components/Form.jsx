@@ -6,7 +6,7 @@ import {
   NumberIncrementStepper,
   NumberDecrementStepper,
 } from "@chakra-ui/react";
-import { Button, ButtonGroup } from "@chakra-ui/react";
+import { Button } from "@chakra-ui/react";
 
 function Form(props) {
   const parse = (val) => val.replace(/^\$/, "");
@@ -16,7 +16,7 @@ function Form(props) {
       <NumberInput
         value={values}
         onChange={(valueString) => {
-          setValues (parse(valueString));
+          setValues(parse(valueString));
           props.changeValue(parse(valueString));
         }}
       >

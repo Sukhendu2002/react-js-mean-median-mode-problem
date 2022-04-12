@@ -11,17 +11,31 @@ app.get("/", (req, res) => {
   res.send("Server is working!");
 });
 
-app.get("/dataSet1", (req, res) => {
+app.get("/data", (req, res) => {
   try {
-    res.send(dataSet1);
+    res.json({
+      dataSet1,
+      dataSet2,
+    });
   } catch (err) {
     res.status(500).send(err);
   }
 });
 
+app.get("/dataSet1", (req, res) => {
+  try {
+    res.json({
+      dataSet1,
+    });
+  } catch (err) {
+    res.status(500).send(err);
+  }
+});
 app.get("/dataSet2", (req, res) => {
   try {
-    res.send(dataSet2);
+    res.json({
+      dataSet2,
+    });
   } catch (err) {
     res.status(500).send(err);
   }
