@@ -1,4 +1,6 @@
 import express from "express";
+import dotenv from "dotenv";
+dotenv.config();
 const app = express();
 import cors from "cors";
 import dataSet1 from "./data/DataSet1.js";
@@ -41,6 +43,6 @@ app.get("/dataSet2", (req, res) => {
   }
 });
 
-app.listen(5000, () => {
+app.listen(5000 || process.env.PORT, () => {
   console.log("Server started on port 5000");
 });
