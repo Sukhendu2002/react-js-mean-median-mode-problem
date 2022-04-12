@@ -31,7 +31,7 @@ function App() {
   }, []);
   const loadData = async () => {
     await axios
-      .get("http://localhost:5000/data")
+      .get("https://reactjs-stats.herokuapp.com/data")
       .then((res) => {
         setDataSet1(res.data.dataSet1);
         setDataSet2(res.data.dataSet2);
@@ -46,7 +46,7 @@ function App() {
       });
   };
 
-  const addData = async  (e) => {
+  const addData = async (e) => {
     const newValue = parseInt(value);
     if (currentDataSet === "dataSet1") {
       await setDataSet1([...dataSet1, newValue]);
@@ -67,7 +67,7 @@ function App() {
     e.preventDefault();
     console.log("Loading data set 1...");
     await axios
-      .get("http://localhost:5000/data")
+      .get("https://reactjs-stats.herokuapp.com/data")
       .then((res) => {
         setDataSet1(res.data.dataSet1);
         setMean(calmean(dataSet1));
@@ -85,7 +85,7 @@ function App() {
     e.preventDefault();
     console.log("Loading data set 2...");
     await axios
-      .get("http://localhost:5000/data")
+      .get("https://reactjs-stats.herokuapp.com/data")
       .then((res) => {
         setDataSet2(res.data.dataSet2);
         setMean(calmean(dataSet2));
